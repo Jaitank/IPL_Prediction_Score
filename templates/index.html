@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Score Prediction System</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+</head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600;700;800&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="css/style.css"> -->
+
+
+<body>
+    <!-- <header class="header">
+        <div class="left">
+            left box for logo
+            <img src="img/logo.png" alt="">
+            <div>Jai's Fitness</div>
+        </div>
+        <div class="mid">
+            mid for navbar
+            <ul class="navbar">
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">About Us</a></li>
+                <li> <a href="#">Get Enroll</a></li>
+                <li> <a href="#">Contact Us</a></li>
+            </ul>
+
+
+        </div>
+        <div class="right">
+            right box for buttons
+            <button class="btn">Call us</button>
+            <button class="btn">Email us</button>
+
+
+        </div>
+    </header> -->
+    <header>
+        <div class="mid">Start Predicting Score for 🏏 Matches</div>
+    </header>
+    <div class="container">
+        <h1>Predict Score here</h1>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <div class="form-group">
+                <select name="batting-team">
+                    <option value="none">--- Select a Batting team ---</option>
+                    <option value="Mumbai Indians">Mumbai Indians</option>
+                    <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                    <option value="Chennai Super Kings">Chennai Super Kings</option>
+                    <option value="Rajasthan Royals">Rajasthan Royals</option>
+                    <option value="Kings XI Punjab">Kings XI Punjab</option>
+                    <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                    <option value="Delhi Daredevils">Delhi Daredevils</option>
+                    <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="bowling-team">
+                    <option value="none">--- Select a Bowling team ---</option>
+                    <option value="Mumbai Indians">Mumbai Indians</option>
+                    <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                    <option value="Chennai Super Kings">Chennai Super Kings</option>
+                    <option value="Rajasthan Royals">Rajasthan Royals</option>
+                    <option value="Kings XI Punjab">Kings XI Punjab</option>
+                    <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                    <option value="Delhi Daredevils">Delhi Daredevils</option>
+                    <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" name="overs" placeholder="Overs (>= 5.0) eg. 7.2">
+            </div>
+            <div class="form-group">
+                <input type="text" name="runs" placeholder="Runs eg. 64">
+            </div>
+            <div class="form-group">
+                <input type="text" name="wickets" placeholder="Wickets eg. 4">
+            </div>
+            <div class="form-group">
+                <input type="text" name="runs_in_prev_5" placeholder="Runs scored in previous 5 Overs eg. 42">
+            </div>
+            <div class="form-group">
+                <input type="text" name="wickets_in_prev_5" placeholder="Wickets taken in previous 5 Overs eg. 3">
+            </div>
+            <!-- <button class="btn"></a> Submit</button> -->
+            <div class='mybtn'><input type="submit" class="btn" value="Predict Score"></div>
+        </form>
+
+    </div>
+    <!-- Footer -->
+    <div class='footer'>
+        <div class="contact">
+            <!-- <a target="_blank" href="https://github.com/anujvyas/IPL-First-Innings-Score-Prediction-Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a> -->
+            <a target="_blank" href="https://www.linkedin.com/in/jai-tank/"><i
+                    class="fab fa-linkedin fa-lg contact-icon"></i></a>
+
+        </div>
+        <p class='footer-description'>Made with ❤️ by Jai tank.</p>
+    </div>
+</body>
+
+</html>
